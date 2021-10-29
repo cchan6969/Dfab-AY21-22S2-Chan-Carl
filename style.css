@@ -1,0 +1,54 @@
+/*comment*/
+* 
+{
+    box-sizing: border-box;
+}
+header
+{
+    border-style: none;
+    background-color: cyan;
+    padding:40px;
+    text-align: center;
+}
+
+
+  
+section
+{
+    float:left;
+  
+    padding: 20px;
+}
+
+nav
+{
+    float:left;
+    width:18%;
+    border-style: none;
+    color:red; 
+    background-color: lightcyan;
+    
+}
+
+nav ul
+{
+list-style-type: none;
+line-height: 1.8;
+}
+article
+{
+    line-height:1.8;
+    text-align: justify;
+    width:70%;
+    float:left;
+    border-style: none;
+    color:black;
+    padding-left: 20px;
+  
+
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
