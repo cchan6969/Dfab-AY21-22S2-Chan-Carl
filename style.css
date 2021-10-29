@@ -11,17 +11,19 @@ header
     text-align: center;
 }
 
-
-  
 section
 {
     float:left;
   
     padding: 20px;
 }
-
+nav h3
+{
+    text-align:center;
+}
 nav
 {
+    
     float:left;
     width:18%;
     border-style: none;
@@ -41,7 +43,7 @@ article
     text-align: justify;
     width:70%;
     float:left;
-    border-style: none;
+    border-style: solid;
     color:black;
     padding-left: 20px;
   
