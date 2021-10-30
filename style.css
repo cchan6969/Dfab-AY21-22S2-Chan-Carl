@@ -3,13 +3,14 @@
 {
     box-sizing: border-box;
 }
-header
+.header
 {
     border-style: none;
     background-color: cyan;
     padding:40px;
     text-align: center;
 }
+
 
 section
 {
