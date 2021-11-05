@@ -1,26 +1,21 @@
 /*comment*/
 * 
 {
+    
     box-sizing: border-box;
-}
-.header
-{
-    border-style: none;
-    background-color: cyan;
-    padding:40px;
-    text-align: center;
+    background-color: black;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-
-section
-{
-    float:left;
-  
-    padding: 20px;
-}
 nav h3
 {
     text-align:center;
+}
+.current
+{
+
+    text-align: center;
 }
 nav
 {
@@ -29,14 +24,15 @@ nav
     width:18%;
     border-style: none;
     color:red; 
-    background-color: lightcyan;
+   
     
 }
-
+nav h3{color: #FF00FF ;}
 nav ul
 {
 list-style-type: none;
 line-height: 1.8;
+text-decoration: none;
 }
 article
 {
