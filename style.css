@@ -11,30 +11,40 @@
 
 nav h3
 {
-    text-align:center;
+    text-align: center;
 }
+
 .current
 {
 
     text-align: center;
 }
+
 nav
 {
     
-    float:left;
-    width:18%;
+    float: left;
+    width: 18%;
     border-style: none;
-    color:red;
-    height: 100vh;
+    color: red;
+    height: 100%;
    
     
 }
-nav h3{color: #FF00FF ;}
+
+nav h3{color: #FF00FF;}
+
 nav ul
 {
-list-style-type: none;
-line-height: 1.8;
-text-decoration: none;
+    list-style-type: none;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+nav ~ *
+{
+    width: 82%;
+    float: right;
 }
 
 /*
@@ -51,7 +61,7 @@ article
 */
 
 .clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+    content: "";
+    clear: both;
+    display: table;
 }
