@@ -47,6 +47,10 @@ nav ~ *
     float: right;
 }
 
+img {
+    float: none !important;
+}
+
 /*
 article
 {
