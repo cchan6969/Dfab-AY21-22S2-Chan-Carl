@@ -1,45 +1,56 @@
 #include <Servo.h>    // include servo library header file
 
-Servo servo1; // create servo object to control servo
-Servo servo2; // create servo object to control servo
+Servo l; // create servo object to control servo
+Servo s; // create servo object to control servo
 
-int Close = 110;  // servo motor PWM position 
-int Open = 150;   // servo motor PWM position 
+int lClose = 180;  // servo motor PWM position 
+int lOpen = 100;   // servo motor PWM position 
 
+//int sClose = 0;   
+int sClose = 0;  // servo motor PWM position 
+int sOpen = 110;   // servo motor PWM position 
+
+int b = 0;
 
 void setup() 
 {
   // put your setup code here, to run once:
   pinMode(4,INPUT);
-  servo1.attach(2); // set servo motor output pwn signal pin
-  servo2.attach(3); // set servo motor output pwn signal pin  
+  l.attach(2); // set servo motor output pwn signal pin
+  s.attach(3); // set servo motor output pwn signal pin  
 
-  servo1.write(50);
-  servo2.write(90);
+
+
+  l.write(lClose);
+  s.write(sClose);
   Serial.begin(9600);  
 }
 
 void loop() 
 {
   // put your main code here, to run repeatedly
-  if (digitalRead(4) == HIGH){
-  Serial.println("high"); }   
-
-  if (digitalRead(4) == LOW){
-  Serial.println("low"); }   
-//  
-  if (digitalRead(4) == HIGH)
+  b = digitalRead(4);
+  if (b == LOW)
   {
-    servo1.write(Open);       // output servo position
+    Serial.println("low"); 
+  }   
+
+  
+  else if (b == HIGH)
+  {
+    Serial.println("high");
+    
+    l.write(lOpen);       // output servo position
     delay(1000);
 
-    servo1.write(Close);      // output servo position
+    s.write(sOpen);      // output servo position
+    delay(500);
+
+    s.write(sClose);       // output servo position
     delay(1000);
 
-    servo2.write(Open);       // output servo position
+    l.write(lClose);      // output servo position
     delay(1000);
-
-    servo2.write(Close);      // output servo position
-    delay(1000);
+    
   }
 }
