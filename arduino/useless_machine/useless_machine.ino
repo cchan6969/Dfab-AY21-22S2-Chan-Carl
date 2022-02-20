@@ -11,15 +11,18 @@ int action = 1;
 
 int pos = 0;
 
-int a = 50;  //arm retract
+int a = 0;  //arm retract 0
 
-int b = 90;  //lid close
+int b = 180;  //lid close 180
 
-int c = 177; //arm extend
+int c = 110; //arm extend 110
 
-int d = 50;  //lid open
+int d = 100;  //lid fully open 100
 
-int e = 155; //arm almost full extend
+int e = c-20; //arm almost full extend 90
+
+int f= 180-d/2; //half lid 130
+
 void setup() 
 {
   pinMode(Switch,INPUT);
@@ -28,9 +31,8 @@ void setup()
   Serial.begin(9600);
 
   // Servo Default Starting Position
-
-  arm.write(50);
-  lid.write(90);
+  arm.write(a);
+  lid.write(b);
 }
 
 void loop() 
@@ -85,185 +87,186 @@ void loop()
 //The Following are actions that are chosen chronologically
 
 void action1() 
-// slow open lid, extend arm, close arm, close lid
+// slow open lid, extend arm, close arm, close lid (checked)
 {
-  lid.write(20);
+  lid.write(f);
   delay(1000);
   
   arm.write(c);
   delay(500); 
   
-  arm.write(50);
+  arm.write(a);
   delay(1000);
   
-  lid.write(90);
+  lid.write(b);
   delay(1000);
 }
 
 void action2() 
 // fast open lid, extend arm, close arm, close lid  
 {
-  lid.write(50);
+  lid.write(d);
   delay(100);
   
-  arm.write(c);
+  arm.write(c+10);
   delay(250);
   
-  arm.write(50);
+  arm.write(a);
   delay(100);
   
-  lid.write(90);
+  lid.write(b);
 }
 
 void action3()
 // slowly open lid, fast arm extend, retract and lid close
 {
-    for(pos = 90; pos > 20; pos -=1)
+    for(pos = b; pos > f; pos -=1)
     {
       lid.write(pos);
       delay(50);
     }
-  arm.write(c);
+  arm.write(c+10);
     delay(250);
   
-    arm.write(50);
+    arm.write(a);
     delay(100);
   
-    lid.write(90);
+    lid.write(b);
 }
 
 void action4() 
 // open lid and hold extend arm for awhile, slow retract and fast lid close
 {
-  delay(250);
-    lid.write(50);
+    delay(250);
+    lid.write(d);
   
     delay(100);
-  arm.write(c);
+    arm.write(c);
   
     delay(2500);
   
-  for(pos = c; pos > 90; pos -=1)
+  for(pos = c; pos > a; pos -=1)
     {
       arm.write(pos);
       delay(50);
     }
-    lid.write(90);
-    arm.write(50);
+    lid.write(b);
+    arm.write(a);
 }
 
 void action5() 
 // jebaiting with opening and closing lid, then extend and retract arm
 {
-  lid.write(50);
+  lid.write(d);
   delay(500);
   
-  lid.write(90);
+  lid.write(b);
   delay(500);
   
-  lid.write(50);
+  lid.write(d);
   delay(500);
   
-  lid.write(90);
+  lid.write(b);
   delay(500);
   
-  lid.write(50);
+  lid.write(d);
   delay(500);
   
-  lid.write(90);
+  lid.write(b);
   delay(2500);
   
-  lid.write(50);
+  lid.write(d);
   delay(100);
   
   arm.write(c);
   delay(250);
   
-  arm.write(50);
+  arm.write(a);
   delay(100);
   
-  lid.write(90);
+  lid.write(b);
 }
 
 void action6() 
 // machine gun rapid open lid, extend arm to alomost touching, retract arm, and finally extend full and close close lid
 {
-  lid.write(50);
+  lid.write(d);
   delay(100);
   
-  arm.write(155);
+  arm.write(e);
   delay(250);
   
-  arm.write(50);
+  arm.write(a);
   delay(100);
   
-  lid.write(90);
+  lid.write(b);
   delay(250);
   
-  lid.write(50);
+  lid.write(d);
   delay(100);
   
-  arm.write(155);
+  arm.write(e);
   delay(250);
   
-  arm.write(50);
+  arm.write(a);
   delay(100);
   
-  lid.write(90);
+  lid.write(b);
   delay(250);
   
-  lid.write(50);
+  lid.write(d);
   delay(100);
   
-  arm.write(155);
+  arm.write(e);
   delay(250);
   
-  arm.write(50);
+  arm.write(a);
   delay(100);
   
-  lid.write(90);
+  lid.write(b);
   delay(250); 
   
-  lid.write(50);
+  lid.write(d);
   delay(100);
   
-  arm.write(c);
+  arm.write(c+15);
   delay(250);
   
-  arm.write(50);
+  arm.write(a);
   delay(100);
   
-  lid.write(90);
+  lid.write(b);
+  delay(500);
 }
 
 void action7() 
 //menacing slowly lid open, arm extend, arm retract, lid close
 {
-    for(pos = 90; pos > 20; pos -=2)
+    for(pos = b; pos > d; pos -=2)
     {
       lid.write(pos);
       delay(50);
   }
   
-  for(pos = 50; pos < 145; pos +=2)
+  for(pos = a; pos < c + 10; pos +=2)
     {
       arm.write(pos);
       delay(100);
     }
   
-    arm.write(c);
+    arm.write(c + 10);
   
-  for(pos = c; pos > 50; pos -=2)
+  for(pos = c + 10; pos > a; pos -=2)
     {
       arm.write(pos);
       delay(100);
     }
   
-  for(pos = 20; pos < 90; pos +=2)
+  for(pos = d; pos < b; pos +=2)
     {
       lid.write(pos);
       delay(50);
     }
   
-    lid.write(90);
+    lid.write(b);
 }

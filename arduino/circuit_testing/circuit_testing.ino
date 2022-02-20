@@ -1,56 +1,56 @@
 #include <Servo.h>    // include servo library header file
 
-Servo l; // create servo object to control servo
-Servo s; // create servo object to control servo
+Servo lid; // create servo object to control servo
+Servo arm; // create servo object to control servo
 
-int lClose = 180;  // servo motor PWM position 
-int lOpen = 100;   // servo motor PWM position 
+int Switch= 4;
 
-//int sClose = 0;   
-int sClose = 0;  // servo motor PWM position 
-int sOpen = 110;   // servo motor PWM position 
+int action = 1;
 
-int b = 0;
+int pos = 0;
+
+int a = 0;  //arm retract 0
+
+int b = 180;  //lid close 180
+
+int c = 110; //arm extend 110
+
+int d = 100;  //lid fully open 100
+
+int e = c-20; //arm almost full extend 90
+
+int f= 180-d/2; //half lid 130
+
 
 void setup() 
 {
   // put your setup code here, to run once:
-  pinMode(4,INPUT);
-  l.attach(2); // set servo motor output pwn signal pin
-  s.attach(3); // set servo motor output pwn signal pin  
+  pinMode(Switch,INPUT);
+  lid.attach(2); // set servo motor output pwn signal pin
+  arm.attach(3); // set servo motor output pwn signal pin  
 
 
 
-  l.write(lClose);
-  s.write(sClose);
+  arm.write(a);
+  lid.write(b);
   Serial.begin(9600);  
 }
 
 void loop() 
 {
   // put your main code here, to run repeatedly
-  b = digitalRead(4);
-  if (b == LOW)
+   if (digitalRead(Switch) == HIGH)
   {
-    Serial.println("low"); 
-  }   
-
+    lid.write(f);
+  delay(1000);
   
-  else if (b == HIGH)
-  {
-    Serial.println("high");
-    
-    l.write(lOpen);       // output servo position
-    delay(1000);
-
-    s.write(sOpen);      // output servo position
-    delay(500);
-
-    s.write(sClose);       // output servo position
-    delay(1000);
-
-    l.write(lClose);      // output servo position
-    delay(1000);
-    
+  arm.write(c);
+  delay(500); 
+  
+  arm.write(a);
+  delay(1000);
+  
+  lid.write(b);
+  delay(1000);
   }
 }
