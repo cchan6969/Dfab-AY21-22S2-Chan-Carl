@@ -32,7 +32,10 @@ nav
     
 }
 
-nav h3{color: #FF00FF;}
+nav h3
+{
+    color: #FF00FF;
+}
 
 nav ul
 {
@@ -47,7 +50,8 @@ nav ~ *
     float: right;
 }
 
-img {
+img 
+{
     float: none !important;
 }
 
@@ -64,7 +68,15 @@ article
 }
 */
 
-.clearfix::after {
+table .cut
+{
+    border:1px solid#99c0c9;
+    width: 100%;
+}
+
+
+.clearfix::after 
+{
     content: "";
     clear: both;
     display: table;

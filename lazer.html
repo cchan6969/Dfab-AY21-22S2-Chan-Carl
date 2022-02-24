@@ -22,20 +22,100 @@
                     <li><a href="EEE.html">Final Project Electronics & Programming</a></li><br>
                     <li><a href="report.html">Module Report</a></li><br>
                 </ul>
-            
             </nav>
             <div>
                 <h3>                Lazer Cutting                </h3>
                 <p>
-                For the music box, I have used Autodesk Inventor Professional 2020 to design.<br>
+                For the music box, I have used <a href="https://www.autodesk.com/products/inventor/overview>">Autodesk Inventor Professional 2020</a> to design, <a href="https://librecad.org/">LibreCAD</a> to reformat the drawing files and <a href="https://inkscape.org">Inkscape</a> to convert the drawings to Scalarble Vector Graphics.<br>
                 <br>
-                Then I exported the faces as .dxf files and opened in Inkscape.<br>
+                <iframe src="https://ichat2473.autodesk360.com/shares/public/SH9285eQTcf875d3c539c0a74c62af68641d?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
                 <br>
-                As a proof of concept, I have attempted to engrave Mai Sakurajima from <a href="https://en.wikipedia.org/wiki/Rascal_Does_Not_Dream_of_Bunny_Girl_Senpai">青春ブタ野郎はランドセルガールの夢を見ない</a> into the inside cover of the music box.
+                Then I had to export the faces as .dxf files and opened in Inkscape.<br>
+                However, due to incompatability issues with exported faces of Inventor with Inkscape, where the exported .dxf files of Inventor is of relese 12 .dxf format.<br>
+                The <a href="https://alpha.inkscape.org/vectors/www.inkscapeforum.com/viewtopicb694.html#p97983">solution</a> is to save it in a different file format, using <a href="https://librecad.org/">LibreCAD</a>.<br>
+                Using <a href="https://librecad.org/">LibreCAD</a>, I am able to save the .dxf as a 2007 .dxf release.<br>
+                These files were imported into 1 Inkscape A4 drawings and exported as an .svg file.
+                <img src="Images/music box vector.png" width="70%"><br>
+                <br>
+                As a proof of concept, I have attempted to engrave Mai Sakurajima from <a href="https://en.wikipedia.org/wiki/Rascal_Does_Not_Dream_of_Bunny_Girl_Senpai">青春ブタ野郎はランドセルガールの夢を見ない</a> into the inside cover of the music box.<br>
                 <br>
                 Image reference used:<br>
                 <br>
-                <img src="Images/Kid Mai.jfif" width="15%"><br>
+                <img src="Images/Kid Mai.jfif" width="30%"><br>
+                <br>
+                To implement an engraving of Mai onto the box, the image has to be converted to either a vector or raster engraving.<br>
+                <br>
+                <img src="Images/raster vs vector.jfif" width="30%"><br>
+                Vector engraving was chosen due to the uncertainty of time constraints when laser cutting.<br>
+                The bit stroke of Mai was made by manually trace the outline and features using the Bezier pen, the node tool and the snapping toolbar.<br>
+                <br>
+                <img src="Images/mai bitstroke.png" width="30%"><br>
+                <br> 
+                This is not the only method to trace the image. However due to the complexity of the model, some of the crucial details to make Mai come alive were not able to be captured by the software, and some of the extra details were also added in as strokes. With editing hundreds of computer generated strokes proving to be out of my abilities, I have opted to do it manually.<br>
+                <br>
+                <img src="Images/auto trace bitmap.png" width="55%"><br>
+                After that, the tracing was imported into the original music box file, resized and realigned.<br>
+                Thereafter, the following settings were applied:<br>
+                <br>
+                <table class="cut">
+                <tr>
+                    <th></th>
+                    <th>Vector Cut</th>
+                    <th>Vector Engrave</th>
+                </tr>
+                <tr>
+                    <th>Color</th>
+                    <td>Red</td>
+                    <td>Green</td>
+                </tr>
+                <tr>
+                    <th>Line Weight</th>
+                    <td>Hairline</td>
+                    <td>Thicker than Hairline</td>
+                </tr>
+                </table><br>
+                <br>
+                <img src="Images/music box with mai.png" width="55%"><br>
+                <br>
+                Transfering this onto CorelDraw on the laser cutting machine, I have set the following setting for the cuts.<br>
+                <br>
+                <table class="cut">
+                    <tr>
+                        <th></th>
+                        <th>Vector Cut (Red)</th>
+                        <th>Vector Engrave (Green)</th>
+                    </tr>
+                    <tr>
+                        <th>Power</th>
+                        <td>40%</td>
+                        <td>40%</td>
+                    </tr>
+                    <tr>
+                        <th>Speed</th>
+                        <td>15%</td>
+                        <td>50%</td>
+                    </tr>
+                    <tr>
+                        <th>PPI</th>
+                        <td>600</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <th>Z-Offset</th>
+                        <td>0.3mm</td>
+                        <td>0.5mm</td>
+                    </tr>
+                </table><br>
+                <hr>
+                <h3>
+                Video of the laser cutting process:<br>
+                </h3>
+                <br>
+                Mai Sakurajima Vector Engraving:<br>
+                <br>
+                <iframe width="400" height="600" src="video/Mai vector engrave.mp4" frameborder="0" allowfullscreen></iframe><br>
+                <br>
+                
                 <a href="CAD/music box/music box lazer cut.svg">Scalarble Vector Graphics file for box with engraving</a><br>
                 <a href="CAD/music box/LeatherbackpackEngraving.svg">Scalarble Vector Graphics file for Mai</a>
                 </p>
