@@ -88,3 +88,12 @@ table .cut
     clear: both;
     display: table;
 }
+
+pre
+{
+    overflow: auto;
+}
+
+.hljs {
+    background-color: #00000000;
+}
