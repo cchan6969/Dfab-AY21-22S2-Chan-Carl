@@ -39,17 +39,124 @@
                     Firstly, I designed a sitting so that the servo and breadboard could be mounted. 
                     The sitting is designed in a shape of a table, so that the external battery pack could be stored under it, and the two servos could be mounted under it.<br>
                     <br>
-
-                    Then, an external cover is made. The external box is made with tessellating patterns in the form of jigsaw male to female formation, for easy aseembly and alignment.<br>
+                    <P><img src="Images/table.png" width="50%"></P><br>
                     <br>
+                    For the servo, 2 different arm attachments were designed. One which raises the lid and one which pushed the rocker switch.<br>
+                    <br>
+                    Then, an external cover is made. The external box is made with tessellating patterns in the form of jigsaw male to female formation, for easy assembly and alignment.<br>
+                    <br>
+                    <P><img src="Images/outer box.png" width="50%"></P><br>
                     The walls of the box contains a hole for the lid to pivot on, where the lid would be procked up by the servo arm attached.<br>
                     <br>
-                    The back panel of the box is taller than the front panel of the box due to the back panel's role in closing the small gap at the back that could not be filled by the lid.
+                    <P><img src="Images/wall.png" width="50%"></P><br>
                     <br>
+                    The back panel of the box does not have a jigsaw pattern on the top due to the back panel's role in closing the small gap at the back that could not be filled by the lid.<br>
+                    <br>
+                    <P><img src="Images/no jigsaw.png" width="50%"></P><br>
                     The top of the box has 2 panels, the lid and the switch panel. The switch panel has a hole which would house the rocker switch.<br>
+                    <br>
+                    <P><img src="Images/switch panel.png" width="50%"></P><br>
                     The lid has a small 1mm gap behind the back panel to allow rotational movements by the lid. If the lid were to be of exact fitting to the gap between the back panel and the side of the switch panel, it would not be able to turn.<br>
-                    
-
+                    <br>
+                    <P><img src="Images/lid.png" width="50%"></P><br>
+                    Another wall has a rectangular cut out in the side. This is made to mount the on off switch at the side of the box.<br>
+                    <br>
+                    <P><img src="Images/wall 2.png" width="50%"></P><br>
+                    <hr>
+                    <h3>3D printing</h3>
+                    For the table, the settings used were:
+                    <li>Layer Height: 0.2</li><br>
+                    <li>Infill Density: 100%</li><br>
+                    <li>Support Type: None </li><br>
+                    <li>Build Plate Support: Brim </li><br>
+                    <li>Print Time: Approximatly 4 hours</li><br>
+                    <P><img src="Images/table cura.png" width="50%"></P><br>
+                    <br>
+                    Failed print of the table due to bad settings which caused the piece to warped on one end.
+                    <P><img src="Images/useless machine/3d print warping.jpg" width="50%"></P><br>
+                    <br>
+                    Failed print of the table that is due to lack of adhesion between layers.
+                    <P><img src="Images/useless machine/failed print.jpg" width="50%"></P><br>
+                    <br>
+                    Failed print of the table that is due to poor infill setting of gyroid pattern and 10% infill. This caused the legs of the table to be quite hollow and thus brittle.
+                    <P><img src="Images/useless machine/broken 3d printed leg.jpg" width="50%"></P><br>
+                    An attempted remedy was to use super glue to join back the snapped parts, but to no avail it still broke.
+                    Failed print of the table that is due to lack of adhesion between layers.
+                    <P><img src="Images/useless machine/super glue (1).jpg" width="50%"></P><br>
+                    <P><img src="Images/useless machine/super glue (2).jpg" width="50%"></P><br>
+                    <P><img src="Images/useless machine/super glue (3).jpg" width="50%"></P><br>
+                    <br>
+                    <br>
+                    Sucessful final print of the table
+                    <P><img src="Images/useless machine/3d print table.jpg" width="50%"></P><br>
+                    <br>
+                    For the 2 servo arms, the settings used were:<br>
+                    <li>Layer Height: 0.1</li><br>
+                    <li>Infill Density: 100%</li><br>
+                    <li>Support Type: Normal </li><br>
+                    <li>Build Plate Support: Brim </li><br>
+                    <li>Print Time: 12 Minutes</li><br>
+                    <br>
+                    Failed original print prototype:
+                    <P><img src="Images/og arm.png" width="50%"></P><br>
+                    <br>
+                    Failed print prototype with 'T' shaped contact point:
+                    <P><img src="Images/t arm.png" width="50%"></P><br>
+                    <br>
+                    Sucessful final print prototype with 'L' shaped contact point:
+                    <P><img src="Images/larm.png" width="50%"></P><br>
+                    <br>
+                    Final print of lid arm:
+                    <P><img src="Images/lid arm print.png" width="50%"></P><br>
+                    <br>
+                    <hr>
+                    <h3>Laser Cutting</h3><br>
+                    For laser cutting the boxes, the individual faces of the model were exported to relase 12 .dxf file format. <br>
+                    This is then converted to 2007 .dxf file format with LibreCAD. <br>
+                    After that, the drawing file is exported to InkScape to be converted to .svg file format. <br>
+                    Finally, this .SVG file format is imported into Corel Draw which is converted to GCode for the laser cutter to read and cut.<br>
+                    <P><img src="Images/useless svg.png" width="50%"></P><br>
+                    <br>
+                    Process of laser cutting:<br>
+                    <iframe width="400" height="600" src="video/Useless Laser Cut.m4v" frameborder="0" allowfullscreen></iframe><br>
+                    <br>
+                    However after laser cutting, the holes on the wall for which the lid's notch sits in to rotate is too thin, thus broke easily.<br>
+                    <P><img src="Images/useless machine/laser cut too thin.jpg" width="50%"></P><br>
+                    <br>
+                    Therefore, the thickness of the piece around the hole was increased,so it would not break easily.<br>
+                    <P><img src="Images/useless 2 svg.png" width="50%"></P><br>
+                    <br>
+                    <hr>
+                    <h3>Assembly</h3>
+                    Firstly, the breadboards with circuits and battery tray were mounted on the table.<br>
+                    Then, the table is secured on the base of the outer box.<br>
+                    <P><img src="Images/useless machine/useless interior (2).jpg" width="50%"></P><br>
+                    After that, the rocker switch is mounted on the switch panel which was glued on the back panel. The rocker switch is mounted on one side and bolted tight with a nut from the top.<br>
+                    Following that, the slider switch was friction fitted on the side of the panel of the box.<br>
+                    Later on, the box is assembled together, with the notches on the lid fitting in the holes on the top of the walls.<br>
+                    <P><img src="Images/useless machine/servo positioning.jpg" width="50%"></P><br>
+                    Next, the 3D printed servo arms are attached onto the arm of the servo with screws and super glue.<br>
+                    <P><img src="Images/useless machine/servo placement.jpg" width="50%"></P><br>
+                    Finally, the servos are secured down onto the table top.<br>
+                    <P><img src="Images/useless machine/servo positioning.jpg" width="50%"></P><br>
+                    <P><img src="Images/useless machine/useless lid open.jpg" width="50%"></P><br>
+                    <br>
+                    Note that the wall with the slider switch is not glued on due to needing to access the Nano board for code implementation.
+                    <hr>
+                    <br>
+                    <h3>Final View</h3>
+                    <br>
+                    <P><img src="Images/useless machine/useless top view.jpg" width="50%"></P><br>
+                    <br>
+                    <P><img src="Images/useless machine/useless top view 2.JPG" width="50%"></P><br>
+                    <br>
+                    <P><img src="Images/useless machine/useless power on off.jpg" width="50%"></P><br>
+                    <hr>
+                    <h3>Files</h3>
+                    <br>
+                    <a href="CAD/final project/useless machine.iam">CAD Inventor Assembly File</a><br>
+                    <a href="CAD/final project/useless.svg">Scalarble Vector Graphics file 1</a><br>
+                    <a href="CAD/final project/useless 2.svg">Scalarble Vector Graphics file 2</a><br>
                 </p>
             </div><!--/article-->
         </div><!--/section-->
