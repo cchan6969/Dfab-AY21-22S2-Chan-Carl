@@ -24,7 +24,7 @@ nav
 {
     
     float: left;
-    width: 18%;
+    width: 14%;
     border-style: none;
     color: red;
     height: 100%;
@@ -34,7 +34,7 @@ nav
 
 nav h3
 {
-    color: #FF00FF;
+    color: #00e1ff;
 }
 
 nav ul
@@ -42,12 +42,19 @@ nav ul
     list-style-type: none;
     line-height: 1.8;
     text-decoration: none;
+    width: 90%;
 }
 
-nav ~ *
+nav ~ div
 {
-    width: 82%;
+    width: 70%;
     float: right;
+    margin-right: 14%;
+}
+
+div > ol
+{
+    display: table;
 }
 
 img 
