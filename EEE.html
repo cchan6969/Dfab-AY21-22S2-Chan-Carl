@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h2 class = "header">My website</h2>
+        <h2 class = "header">Carl's Website</h2>
         <div>
             <nav>
                 <h3>Navigation</h3>
@@ -27,9 +27,56 @@
             <div>
                 <h3>              Final Project Electronics & Programming             </h3>
                 <p>
-                    For the programming, I have used a code provided by <a href="https://youtu.be/kproPsch7i0">fritend1</a> video on YouTube. <br>
-                    <a href="arduino/circuit_testing/circuit_testing.ino">Useless Machine Troubleshooting and PWM adjustment code</a><br>
-                    <a href="arduino/useless_machine/useless_machine.ino">Useless Machine's Arduino Code</a>
+                For the programming, I have used a code provided by <a href="https://youtu.be/kproPsch7i0">fritend1</a> video on YouTube. <br>
+                <hr>
+                <h3>TinkerCAD simulation</h3><br>
+                <br>
+                <p><img src="Images/useless tinkercad.png" width="70%"></p><br>
+                <br>
+                Due to a lack of a proper working Arduino Nano model in TinkerCad, this model is done on the Arduino Uno, instead of a Arduino Nano which would be used in the actual circuitry. 
+                Firstly, a 6V 4x AA battery setup links to a slider SPDT(Single Pole Double Throw) which has been converted to an active low set up. The 6V from the battery goes into the Vin input pin of the Microcontroller, as the microcontoller can only take in 5V in the 5V USB port or the 5V pin. However, the Vin pin can take in 5-7V, and using an intergrated LM7805 to convert a range of 5-7V to a fixed 5V. Therefore the 6V input has been stepped down to a 5V input for the Arduino.<br>
+                <br>
+                Next, Pin 2 and 3 has been converted to digital output pins, and Pin 4 has been converted to digital input pin. This means that a signal would be produced and run the Servo motor at the signal port for pin 2 and 3, and a signal input will be taken in by the active low switch configuration at pin 4. For the 2 Servo, they take in 5V at the power pins and grounding wire at the ground pins.<br>
+                <br>
+                Finally a 330 Ohms resister has been attached to the unused pin of the rocker switch as to prevent intermittent voltage discharge from the switch. Without this resistor, Pin 4 would randomly switch state due to the intermittent voltage discharged.<br>
+                <br>
+                <hr>
+                <h3>Coding</h3>
+                <a href="arduino/circuit_testing/circuit_testing.ino">Useless Machine Troubleshooting and PWM adjustment code</a><br>
+                <a href="arduino/useless_machine/useless_machine.ino">Useless Machine's Arduino Code</a>
+                <hr>
+                <h3>Actual Wiring</h3><br>
+                Circuit lay out for useless machine:<br>
+                <P><img src="Images/useless machine/IMG_5019.jpg" width="30%"></P><br>
+                <hr>
+                Flow of circuit for the useless machine:<br>
+                <P><img src="Images/useless machine/all electronics.jpg" width="30%"></P><br>
+                <hr>
+                Soldering of small rocker switch:<br>
+                <P><img src="Images/useless machine/IMG_5027.jpg" width="30%"></P><br>
+                <P><img src="Images/useless machine/IMG_5028.jpg" width="30%"></P><br>
+                <br>
+                Due to execessive heat from the long duration that the switch was in procimity of the soldering iron, the small rocker switch's plastic outer chasis melted and caused the internal wiring to go haywire and rendering the switch broken.<br>
+                Therefore a larger rocker switch was used.<br>
+                <P><img src="Images/useless machine/bad soldering of switch.jpg" width="30%"></P><br>
+                <hr>
+                Soldering of slider switch:<br>
+                <P><img src="Images/useless machine/IMG_5023.jpg" width="20%"></P><br>
+                <hr>
+                Soldering of battery pack:<br>
+                <P><img src="Images/useless machine/IMG_5020.jpg" width="20%"></P><br>
+                When I received the battery pack, there was a soldered extended male end dupont cable on. Thus to protect the soldering and preventing it from breaking off, I used a heat shrink tube to shrink and protect the joint.<br>
+                <P><img src="Images/useless machine/IMG_5024.jpg" width="20%"></P><br>
+                <hr>
+                Wrong servo:<br>
+                <P></P><img src="Images/useless machine/IMG_5034.jpg" width="20%"><br>
+                For the useless machine, a Positional servo motor should be used as it can be precisely controlled and moved, which in comparison a Continuous servo motor moves continuously and is difficult to control and reverse the direction.<br>
+                <hr>
+                Breadboard Wiring:<br>
+                <P></P><img src="Images/useless machine/useless breadboard.jpg" width="20%"><br>
+
+
+                </P>
                 </p>
                
             </div>
